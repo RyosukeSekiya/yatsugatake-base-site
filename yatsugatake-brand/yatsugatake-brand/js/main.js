@@ -1,4 +1,5 @@
-console.log("main.js loaded");
+var header = document.querySelector('.site-header');
+console.log(header);
 /**
  * YATSUGATAKE BASE — main.js
  * 最小限のJavaScriptのみ使用
