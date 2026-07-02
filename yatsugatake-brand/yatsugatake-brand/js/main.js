@@ -1,3 +1,8 @@
+(function () {
+  'use strict';
+
+  console.log("main.js loaded");
+  
 /**
  * YATSUGATAKE BASE — main.js
  * 最小限のJavaScriptのみ使用
