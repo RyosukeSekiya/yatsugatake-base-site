@@ -637,7 +637,7 @@ svg {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2px;
 }
 
@@ -651,6 +651,7 @@ svg {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
 .gallery-item--tall {
@@ -660,7 +661,21 @@ svg {
 
 .gallery-item--wide {
   grid-column: span 2;
-  aspect-ratio: 2;
+  aspect-ratio: 2 / 1;
+}
+
+/* タブレット以上 */
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* デスクトップ */
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .gallery-placeholder {
